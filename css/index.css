@@ -1,0 +1,101 @@
+.self_info {
+  float: left;
+  width: 20%;
+  height: 100%;
+  background: #1d1a1a;
+  text-align: center;
+  padding-top: 100px;
+}
+.self_info .head_portrait {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.self_info .head_portrait img {
+  display: block;
+}
+.self_info nav {
+  padding: 50px 0px;
+}
+.self_info nav li {
+  list-style: none;
+  line-height: 48px;
+  margin-bottom: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.archive_info {
+  float: left;
+  height: 100%;
+  width: 80%;
+  overflow: auto;
+}
+.archive_info .post_item {
+  list-style: none;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 5px #ccc;
+  overflow: hidden;
+}
+.archive_info .post_item article {
+  width: 100%;
+  position: relative;
+  height: 400px;
+}
+.archive_info .post_item article .post_synopsis {
+  z-index: 200;
+  position: absolute;
+}
+.archive_info .post_item article .post_synopsis .post_title {
+  position: relative;
+  left: 0%;
+  height: 50%;
+  background-position: center;
+  color: #fff;
+  height: 220px;
+  line-height: 220px;
+  font-size: 68px;
+  text-align: center;
+  transition: all 0.5s linear;
+}
+.archive_info .post_item article .post_synopsis .post_bottom {
+  position: relative;
+  right: 0;
+  color: #888;
+  font-size: 18px;
+  padding: 20px;
+  transition: all 0.5s linear;
+}
+.archive_info .post_item article .post_synopsis .post_bottom .post_describe {
+  padding-bottom: 20px;
+}
+.archive_info .post_item article .post_synopsis .post_bottom .post_footer {
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+}
+.archive_info .post_item article .post_synopsis .post_bottom .post_footer .post_type {
+  float: left;
+}
+.archive_info .post_item article .post_synopsis .post_bottom .post_footer .post_date {
+  float: right;
+}
+.archive_info .post_item article .post_content {
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  transition: all 0.5s linear;
+  transform: scale(0);
+  backface-visibility: hidden;
+}
+.archive_info .post_item article:hover .post_synopsis .post_title {
+  left: -100%;
+}
+.archive_info .post_item article:hover .post_synopsis .post_bottom {
+  right: -100%;
+}
+.archive_info .post_item article:hover .post_content {
+  transform: scale(1);
+}

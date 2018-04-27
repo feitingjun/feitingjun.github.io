@@ -1,0 +1,63 @@
+article {
+  width: 100%;
+  position: relative;
+  height: 400px;
+}
+article .post_synopsis {
+  z-index: 200;
+  position: absolute;
+}
+article .post_synopsis .post_title {
+  position: relative;
+  left: 0%;
+  height: 50%;
+  background-position: center;
+  color: #fff;
+  height: 220px;
+  line-height: 220px;
+  font-size: 68px;
+  text-align: center;
+  transition: all 0.5s linear;
+}
+article .post_synopsis .post_bottom {
+  position: relative;
+  right: 0;
+  color: #888;
+  font-size: 18px;
+  padding: 20px;
+  transition: all 0.5s linear;
+}
+article .post_synopsis .post_bottom .post_describe {
+  padding-bottom: 20px;
+}
+article .post_synopsis .post_bottom .post_footer {
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+}
+article .post_synopsis .post_bottom .post_footer .post_type {
+  float: left;
+}
+article .post_synopsis .post_bottom .post_footer .post_date {
+  float: right;
+}
+article .post_content {
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  transition: all 0.5s linear;
+  transform: scale(0);
+  backface-visibility: hidden;
+}
+article:hover .post_synopsis .post_title {
+  left: -100%;
+}
+article:hover .post_synopsis .post_bottom {
+  right: -100%;
+}
+article:hover .post_content {
+  transform: scale(1);
+}
