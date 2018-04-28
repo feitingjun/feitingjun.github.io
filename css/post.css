@@ -1,63 +1,74 @@
 article {
   width: 100%;
   position: relative;
-  height: 400px;
+  padding-bottom: 40px;
 }
 article .post_synopsis {
-  z-index: 200;
-  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 article .post_synopsis .post_title {
-  position: relative;
-  left: 0%;
-  height: 50%;
-  background-position: center;
+  line-height: 48px;
+  height: 48px;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+article .post_synopsis .post_title .post_date {
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  background: #333;
   color: #fff;
-  height: 220px;
-  line-height: 220px;
-  font-size: 68px;
-  text-align: center;
-  transition: all 0.5s linear;
+  display: inline-block;
+  padding: 1px 10px;
+  transition: all 0.5s;
+  position: relative;
+  left: 0px;
+}
+article .post_synopsis .post_title .post_triangle {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border: 35px solid #333;
+  border-top: 24px solid transparent;
+  border-bottom: 24px solid transparent;
+  border-right: 24px solid transparent;
+  transition: all 0.5s;
+  position: relative;
+  left: 0px;
+}
+article .post_synopsis:hover .post_title .post_date {
+  left: 20px;
+}
+article .post_synopsis:hover .post_title .post_triangle {
+  left: 20px;
 }
 article .post_synopsis .post_bottom {
-  position: relative;
-  right: 0;
-  color: #888;
-  font-size: 18px;
-  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+article .post_synopsis .post_bottom img {
+  width: 25%;
+  float: left;
   transition: all 0.5s linear;
+}
+article .post_synopsis .post_bottom img:hover {
+  transform: scale(1.2);
+  transform-origin: 50% 50%;
 }
 article .post_synopsis .post_bottom .post_describe {
-  padding-bottom: 20px;
-}
-article .post_synopsis .post_bottom .post_footer {
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-  overflow: hidden;
-}
-article .post_synopsis .post_bottom .post_footer .post_type {
   float: left;
+  display: inline-block;
+  margin-top: 10px;
+  width: calc(75% - 40px);
+  padding-left: 40px;
+  color: #777;
 }
-article .post_synopsis .post_bottom .post_footer .post_date {
+article .post_synopsis .post_bottom a {
   float: right;
-}
-article .post_content {
-  height: 100%;
-  padding: 20px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 100;
-  transition: all 0.5s linear;
-  transform: scale(0);
-  backface-visibility: hidden;
-}
-article:hover .post_synopsis .post_title {
-  left: -100%;
-}
-article:hover .post_synopsis .post_bottom {
-  right: -100%;
-}
-article:hover .post_content {
-  transform: scale(1);
+  text-decoration: underline;
+  font-size: 14px;
+  color: #22ad3b;
 }

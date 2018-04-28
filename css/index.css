@@ -1,101 +1,255 @@
 .self_info {
-  float: left;
-  width: 20%;
-  height: 100%;
-  background: #1d1a1a;
+  width: 100%;
+  height: 300px;
   text-align: center;
-  padding-top: 100px;
-}
-.self_info .head_portrait {
-  display: inline-block;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.self_info .head_portrait img {
-  display: block;
+  position: relative;
 }
 .self_info nav {
-  padding: 50px 0px;
-}
-.self_info nav li {
-  list-style: none;
-  line-height: 48px;
-  margin-bottom: 20px;
-  color: #fff;
-  cursor: pointer;
-}
-.archive_info {
-  float: left;
-  height: 100%;
-  width: 80%;
-  overflow: auto;
-}
-.archive_info .post_item {
-  list-style: none;
-  margin-bottom: 30px;
-  box-shadow: 5px 5px 5px #ccc;
-  overflow: hidden;
-}
-.archive_info .post_item article {
-  width: 100%;
-  position: relative;
-  height: 400px;
-}
-.archive_info .post_item article .post_synopsis {
-  z-index: 200;
   position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 200;
+  height: 100%;
 }
-.archive_info .post_item article .post_synopsis .post_title {
+.self_info nav>div {
+  color: #fff;
+  font-size: 66px;
+  line-height: 300px;
+  text-shadow: 5px 5px 1px #888;
   position: relative;
   left: 0%;
-  height: 50%;
-  background-position: center;
+  animation: myfirst 2s ease-in;
+  animation-fill-mode: forwards;
+}
+.self_info nav ul {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  right: 20px;
+  top: 0px;
+}
+.self_info nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 20px;
+  line-height: 54px;
+}
+.self_info nav ul li a {
   color: #fff;
-  height: 220px;
-  line-height: 220px;
-  font-size: 68px;
-  text-align: center;
-  transition: all 0.5s linear;
 }
-.archive_info .post_item article .post_synopsis .post_bottom {
-  position: relative;
-  right: 0;
-  color: #888;
-  font-size: 18px;
-  padding: 20px;
-  transition: all 0.5s linear;
+@-moz-keyframes myfirst {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
-.archive_info .post_item article .post_synopsis .post_bottom .post_describe {
-  padding-bottom: 20px;
+@-webkit-keyframes myfirst {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
-.archive_info .post_item article .post_synopsis .post_bottom .post_footer {
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-  overflow: hidden;
+@-o-keyframes myfirst {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
-.archive_info .post_item article .post_synopsis .post_bottom .post_footer .post_type {
-  float: left;
+@keyframes myfirst {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
-.archive_info .post_item article .post_synopsis .post_bottom .post_footer .post_date {
-  float: right;
-}
-.archive_info .post_item article .post_content {
+.self_info #head_canvas1 {
+  width: 100%;
   height: 100%;
-  padding: 20px;
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: 100;
+  background: #010e16;
+}
+.self_info #head_canvas2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 150;
+}
+.archive_info {
+  width: 100%;
+}
+.archive_info section {
+  width: 65%;
+  float: left;
+  padding-left: 50px;
+}
+.archive_info section article {
+  width: 100%;
+  position: relative;
+  padding-bottom: 40px;
+}
+.archive_info section article .post_synopsis {
+  width: 100%;
+  height: 100%;
+}
+.archive_info section article .post_synopsis .post_title {
+  line-height: 48px;
+  height: 48px;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.archive_info section article .post_synopsis .post_title .post_date {
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  background: #333;
+  color: #fff;
+  display: inline-block;
+  padding: 1px 10px;
+  transition: all 0.5s;
+  position: relative;
+  left: 0px;
+}
+.archive_info section article .post_synopsis .post_title .post_triangle {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border: 35px solid #333;
+  border-top: 24px solid transparent;
+  border-bottom: 24px solid transparent;
+  border-right: 24px solid transparent;
+  transition: all 0.5s;
+  position: relative;
+  left: 0px;
+}
+.archive_info section article .post_synopsis:hover .post_title .post_date {
+  left: 20px;
+}
+.archive_info section article .post_synopsis:hover .post_title .post_triangle {
+  left: 20px;
+}
+.archive_info section article .post_synopsis .post_bottom {
+  overflow: hidden;
+  width: 100%;
+}
+.archive_info section article .post_synopsis .post_bottom img {
+  width: 25%;
+  float: left;
   transition: all 0.5s linear;
-  transform: scale(0);
-  backface-visibility: hidden;
 }
-.archive_info .post_item article:hover .post_synopsis .post_title {
-  left: -100%;
+.archive_info section article .post_synopsis .post_bottom img:hover {
+  transform: scale(1.2);
+  transform-origin: 50% 50%;
 }
-.archive_info .post_item article:hover .post_synopsis .post_bottom {
-  right: -100%;
+.archive_info section article .post_synopsis .post_bottom .post_describe {
+  float: left;
+  display: inline-block;
+  margin-top: 10px;
+  width: calc(75% - 40px);
+  padding-left: 40px;
+  color: #777;
 }
-.archive_info .post_item article:hover .post_content {
-  transform: scale(1);
+.archive_info section article .post_synopsis .post_bottom a {
+  float: right;
+  text-decoration: underline;
+  font-size: 14px;
+  color: #22ad3b;
+}
+.archive_info section .abstract {
+  line-height: 48px;
+}
+.archive_info section .abstract strong {
+  display: inline-block;
+  width: 14px;
+  height: 40px;
+  background: #000;
+  vertical-align: middle;
+}
+.archive_info section li {
+  list-style: none;
+}
+.archive_info aside {
+  float: left;
+}
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 250;
+  left: 0;
+  top: 0;
+}
+.text {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+.text:nth-child(5n + 1) {
+  stroke: #f2385a;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #f5a503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text:nth-child(5n + 3) {
+  stroke: #e9f1df;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text:nth-child(5n + 4) {
+  stroke: #56d9cd;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text .tex:nth-child(5n + 5) {
+  stroke: #3aa1bf;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@-moz-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@-o-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
 }
