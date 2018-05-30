@@ -1,121 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hexo</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <title>webpack</title>
+  <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
-    <div id="main">
-        <div class="index_page">
-    <div class="self_info">
-    <svg viewBox="0 0 1600 300">
-        <symbol id="s-text">
-            <text font-size="120px" text-anchor="middle" x="50%" y="50%" dy=".35em">此 处 应 有 一 行 字</text>
-        </symbol>
-        <use class="text" xlink:href="#s-text"></use>
-        <use class="text" xlink:href="#s-text"></use>
-        <use class="text" xlink:href="#s-text"></use>
-        <use class="text" xlink:href="#s-text"></use>
-        <use class="text" xlink:href="#s-text"></use>
-    </svg>
-    <nav>
-        <ul>
-            
-                <li><a href="/">首页</a></li>
-            
-                <li><a href="/archives">文档</a></li>
-            
-        </ul>
-    </nav>
-    <canvas id="head_canvas1"></canvas>
-    <canvas id="head_canvas2"></canvas>
-</div>
-    <div class="archive_info">
-        <section>
-            
-                <p class="abstract">
-                    <strong></strong> 文章摘要
-                </p>
-                
-                    <li class="post_item"><!-- <article>
-    <h4 class="post-title"><i class="iconfont">&#xe609;</i><a href="/2018/04/27/hello/">hello</a></h4>
-    <h6 class="date"><i class="iconfont">&#xf0069;</i>2018-04-27</h6>
-    
-    <section class="md post-content">
-        
-            
-        
-        
-            
-        
-    </section>
-    
-</article> -->
-<article>
-    <div class="post_synopsis">
-        <div class="post_title">
-            <span class="post_date">2018-04-27</span><span class="post_triangle"></span>
-            <span>hello</span>
-        </div>
-        <div class="post_bottom">
-            <img src="/img/hello.jpg" alt="">
-            <p class="post_describe">这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述</p>
-            <a href="2018/04/27/hello/">继续阅读>></a>
-        </div>
-    </div>
-</article></li>
-                
-                    <li class="post_item"><!-- <article>
-    <h4 class="post-title"><i class="iconfont">&#xe609;</i><a href="/2018/04/27/hello-world/">你好 世界</a></h4>
-    <h6 class="date"><i class="iconfont">&#xf0069;</i>2018-04-27</h6>
-    
-    <section class="md post-content">
-        
-            
-        
-        
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
-        
-    </section>
-    
-</article> -->
-<article>
-    <div class="post_synopsis">
-        <div class="post_title">
-            <span class="post_date">2018-04-27</span><span class="post_triangle"></span>
-            <span>你好 世界</span>
-        </div>
-        <div class="post_bottom">
-            <img src="/img/he.jpeg" alt="">
-            <p class="post_describe">这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述</p>
-            <a href="2018/04/27/hello-world/">继续阅读>></a>
-        </div>
-    </div>
-</article></li>
-                
-            
-        </section>
-        <aside>
+<div id="root"></div>
+<script src="index.js"></script>
 
-        </aside>
-    </div>
-</div>
-    </div>
-    <script src="/js/jquery.min.js"></script>
-    
-        <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-    
-    <script src="/js/canvas.js"></script>
+</body>
 </html>
